@@ -1,0 +1,45 @@
+{
+  "name": "grunt-gh-releaser",
+  "description": "The best Grunt plugin ever.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/djtek/grunt-gh-releaser",
+  "author": {
+    "name": "Luciano P. Altube",
+    "email": "luciano@whistle.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/djtek/grunt-gh-releaser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/djtek/grunt-gh-releaser/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/djtek/grunt-gh-releaser/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "0.11.3",
+    "grunt-contrib-nodeunit": "0.4.1",
+    "sinon": "1.17.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "async": "1.5.2",
+    "github": "0.2.4"
+  }
+}
