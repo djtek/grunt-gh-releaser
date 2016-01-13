@@ -43,7 +43,7 @@ module.exports = function(grunt) {
           password: process.env.GH_PASSWORD
         },
         owner: process.env.GH_OWNER,
-        repo: 'grunt-gh-release'
+        repo: 'grunt-gh-releaser'
       },
       release: {
         tag_name: "v<%= pkg.version %>",
@@ -59,5 +59,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
   grunt.registerTask('test', ['nodeunit']);
+  grunt.registerTask('release', ['gh_release']);
   grunt.registerTask('default', ['jshint', 'test']);
 };
