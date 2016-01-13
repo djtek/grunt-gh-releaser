@@ -1,7 +1,7 @@
 {
   "name": "grunt-gh-releaser",
   "description": "The best Grunt plugin ever.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/djtek/grunt-gh-releaser",
   "author": {
     "name": "Luciano P. Altube",
