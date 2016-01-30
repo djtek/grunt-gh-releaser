@@ -14,14 +14,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    nodeunit: {
-      all: ['test/*_test.js'],
-      options: {
-        reporter: 'junit',
-        reporterOptions: {
-          output: 'outputdir'
-        }
-      }
+    simplemocha: {
+      all: { src: ['test/lib/*.js'] }
     },
 
     jshint: {
@@ -56,9 +50,10 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
-
-  grunt.registerTask('test', ['nodeunit']);
+  grunt.loadNpmTasks('grunt-mocha');
+  grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.registerTask('test', ['simplemocha']);
   grunt.registerTask('release', ['gh_release']);
   grunt.registerTask('default', ['jshint', 'test']);
 };
